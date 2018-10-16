@@ -2,5 +2,18 @@ runtime: php55
 api_version: 1
 
 handlers:
-- url: /*.
-  script: test.php
+- url: /css
+  static_dir: css
+
+- url: /(.*\.css)
+  static_files: static/\1
+  upload: static/.*\.css
+
+- url: /
+  script: login.php
+  
+- url: /BoredBear.php
+  script: BoredBear.php
+  
+- url: /(.+\.php)$
+  script: \1

@@ -3,6 +3,8 @@
 
 		<?php
 			$submitted = !isset($_POST['login']);
+			//added.
+			$searched = !isset($_POST['login']);
 
 			echo $submitted;
 
@@ -20,12 +22,13 @@
 			}
 			
 
-			if (!$submitted && $user != "" && $pwd != "") {		
+			if (!$submitted && $user != "" && $pwd != "") {	
+					echo $submitted;
 		?>
-
+			
 			<div class="header" style="padding: 20px; background-color: Mistyrose;">BORED BEAR</div>
-				<div class="row">
-					<div style="width: 40%">
+				<div class="row" style="float: left">
+					<div style="float: left">
 						<iframe
 							allow="microphone;"
 							width="350"
@@ -34,14 +37,14 @@
 						</iframe>
 					</div>
 
-					<div style="width: 60%">
+					<div style="float: left, margin = 15px">
 						<form method="POST">
 							Input street name where you are now: <input type="text" name="location" id="location">
-							<input type="submit" name="search" id="search">Search</button><br/>
+							<button type="submit" name="search" id="search">Search</button><br/>
 						</form>
 						<?php
-
-							if (isset($_POST['search'])) {
+							echo $submitted;
+							if (!$searched && isset($_POST['search'])) {
 
 								$query = "SELECT Street_address, Trading_name FROM [test-project-210801:restaurant.restaurants_mel] WHERE REGEX_MATCH(Street_address, r'^" . $_POST['location'] . "')";
 								echo $query;
