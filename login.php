@@ -25,6 +25,7 @@
 
 <head>
   <link rel='stylesheet' type='text/css' href='/css/style.css'>
+  <script src="/javascript/javascript.js"></script>
 </head>
 					
 <div class="BoredBear">
@@ -49,7 +50,7 @@
     <div class="finger"></div>
   </div>
 </div>
-<form method="POST" action="BoredBear.php">
+<form class="formlogin" method="POST" action="BoredBear.php">
   <div class="hand"></div>
   <div class="hand rgt"></div>
   <h1>BoredBear Login</h1>

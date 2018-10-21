@@ -11,7 +11,7 @@ body{
   text-align: center;
   font-family: 'Roboto', sans-serif;
 }
-.BoredBear{
+.bb{
   position: relative;
   width: 200px;
   margin: 50px auto;
@@ -224,7 +224,7 @@ body{
 }
 
 
-form{
+.formlogin{
   display: none;
   max-width: 400px;
   padding: 20px 40px;

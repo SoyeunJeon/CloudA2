@@ -5,7 +5,7 @@ $('#password').focusout(function(){
   $('form').removeClass('up')
 });
 
-// BoredBear Eye move
+// Panda Eye move
 $(document).on( "mousemove", function( event ) {
   var dw = $(document).width() / 15;
   var dh = $(document).height() / 15;
@@ -16,6 +16,8 @@ $(document).on( "mousemove", function( event ) {
     height : y
   });
 });
+
+// validation
 
 
 $('.btn').click(function(){

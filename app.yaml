@@ -4,10 +4,17 @@ api_version: 1
 handlers:
 - url: /css
   static_dir: css
+  
+- url: /javascript
+  static_dir: javascript
 
 - url: /(.*\.css)
   static_files: static/\1
   upload: static/.*\.css
+  
+- url: /(.*\.javascript)
+  static_files: static/\1
+  upload: static/.*\.js  
 
 - url: /
   script: login.php
